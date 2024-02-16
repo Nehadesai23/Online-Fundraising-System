@@ -1,0 +1,19 @@
+<?php
+include_once('header2.php');
+?>
+<head>
+	<style>
+	section{
+		min-height:600px;
+		background-image:url('images/img12.jpg');
+		background-repeat:no repeat;
+		background-position:center;
+		background-size:cover;
+	}
+	</style>
+</head>
+<section>
+</section>
+<?php
+include_once('footer.php');
+?>

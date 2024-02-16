@@ -1,0 +1,102 @@
+create database charity;
+use charity;
+
+create table reg_charity_org(
+id int primary key not null auto_increment,
+charity_org_name varchar(255),
+charity_org_mobile int,
+charity_org_email varchar(255),
+charity_org_address varchar(255));
+
+create table reporter(
+id int primary key not null auto_increment,
+reporter_image varchar(255),
+reporter_name varchar(255),
+reporter_mobile int,
+reporter_email varchar(255),
+reporter_address varchar(255));
+
+create table needy_people(
+id int primary key not null auto_increment,
+needy_people_image varchar(255),
+needy_people_name varchar(255),
+needy_people_mobile int,
+needy_people_address varchar(255),
+needy_people_income_certf varchar(255));
+
+create table donors(
+id int primary key not null auto_increment,
+donor_image varchar(255),
+donor_name varchar(255),
+donor_mobile int,
+donor_email varchar(255),
+donor_address varchar(255),
+donor_amount varchar(255));
+
+create table admin(
+id int primary key not_null auto_increment,
+username varchar(255),
+password varchar(255));
+
+create table notapproved(
+id int primary key not null auto_increment,
+reporter_image varchar(255),
+reporter_name varchar(255),
+reporter_mobile int,
+reporter_email varchar(255),
+reporter_address varchar(255),
+username varchar(255),
+password varchar(255),
+action varchar(255));
+
+create table approved(
+id int primary key not null auto_increment,
+reporter_image varchar(255),
+reporter_name varchar(255),
+reporter_mobile int,
+reporter_email varchar(255),
+reporter_address varchar(255),
+username varchar(255),
+password varchar(255),
+action varchar(255));
+
+create table donator(
+id int primary key not null auto_increment,
+donator_name varchar(255),
+donator_mobile varchar(255),
+donator_email varchar(255),
+charity_name varchar(255),
+amount float);
+
+create table contribute(
+id int primary key not null auto_increment,
+charity_name varchar(255),
+charity_mobile varchar(255),
+charity_email varchar(255),
+charity_address varchar(255),
+contr_amount float);
+
+create table donate_to_ppl(
+id int primary key not null auto_increment,
+name varchar(255),
+mobile varchar(255),
+address varchar(255),
+amount float);
+
+create table total(
+id int primary key not null auto_increment,
+total_amount float); 
+
+create table transactions(
+id int primary key not null auto_increment,
+mobile varchar(255),
+action varchar(255),
+from_name varchar(255),
+to_name varchar(255),
+amount float); 
+
+
+
+
+
+
